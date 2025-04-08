@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Welcome | xinhu | bolg </title>
+<!-- Stylesheets -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+
+<!--Favicon-->
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+
+<div class="page-wrapper default-version">
+ 	
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <div class="page-background">
+        <div class="image-1"><img src="images/icons/shape/icon-1.png" class="now-in-view" alt=""></div>
+        <div class="image-7"><img src="images/icons/shape/icon-7.png" class="now-in-view" alt=""></div>
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu">
+        <div class="container">
+            <!--Nav Outer-->
+            <div class="nav-outer clearfix">
+                <div class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
+                <!-- Main Menu -->
+                <nav class="main-menu">
+                    <div class="navbar-header">
+                        <!-- Toggle Button -->      
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    
+                    <div class="navbar-collapse collapse scroll-nav clearfix">
+                        <ul class="navigation clearfix">
+                            
+                            <li class="current"><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#resume">Resume</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#work">Cyberpunk</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#contact">Contact</a></li>
+
+                         </ul>
+                    </div>
+                </nav>
+                <!-- Main Menu End-->                        
+            </div>
+            <!--Nav Outer End-->            
+        </div>
+    </div>
+ 	
+    <div class="card-outer">
+        <div class="scroll-box">
+            <div class="container" data-animation-in="fadeInLeft" data-animation-out="fadeOutLeft">
+                <div class="card-wrapper">
+                    <div class="author-info" style="background-image:url(images/background/3.jpg)">
+                        <div class="image"><img src="images/resource/user.png" alt=""></div>
+                        <div class="author">
+                            <h3>xinhu</h3>
+                            <div class="designation">
+                                Hi i’m
+                                <div class="typing-title">
+                                    <p>a <strong>reverser.</strong></p>
+                                    <p>a <strong>reverser.</strong></p>
+                                    <p>a <strong>reverser.</strong></p>
+                                </div>
+                                <span class="typed-title"></span>
+                            </div>
+                        </div>
+                        <div class="link-btn">
+                            <a href="#" class="theme-btn btn-style-one">Download CV</a>
+                        </div>
+                        <ul class="social-icon-two">
+                            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                            <li><a href="#"><span class="fa fa-pinterest"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="card-inner-box offsetleft">
+                        <header class="header">
+                            <ul class="main-menu">
+                                <li class="home"><a class="logo" href="index.html"><img src="images/logo.png" alt=""></a></li>
+                                <li class="active"><a href="#blog"><i class="flaticon-blog"></i>Blog</a></li>
+                            </ul>
+                        </header>
+
+                        <!-- card item -->
+                        <div class="card-blog single-post card-item active" id="blog" style="background-image:url(images/background/2.jpg)">
+                            <div class="card-inner">
+                                <h4 class="title"></h4>
+                                <div class="news-block">
+                                    <div class="inner-box">
+                                        <div class="image">
+                                            <img src="images/resource/1.png" alt="">
+                                        </div>
+                                        <div class="date"><strong>02</strong> <br>April</div>
+                                        <div class="lower-content">
+                                            <h4>python逆向</h4>
+                                            <div class="post-meta">by xinhu  /  <span>Design</span></div>
+                                            <div class="text">
+                                                <h2>pyd&&cpython逆向</h2>
+                                                    <p>pyd本质是cython的最终产物实际上是一个dll提供python脚本的调用<br>
+                                                        正常来说pyd默认是去除符号的，而linux下编译默认会有符号，那么当我们拿到pyd的题目的时候首先就需要使用bindff进行恢复符号表
+                                                       <br> 编写setuppy和text.pyx，再通过与题目相应版本的python版本进行编译出pyd，那么为了使cpython编译出更多的函数方便识别，我们的pyx可以这么写</p>
+                                                    <PRE><CODE>
+def check(flag):
+    a=1*1
+    b=2*2
+    c=2^3
+    a=[0]*6
+    b=0
+    while b:
+        print("11")
+        b-=1
+        rand0m(flag)
+        return a+b+c+flag
+def rand0m(x):
+    return x^123
+__text__={}
+                                                    </CODE></PRE>
+                                                       <pre>
+                                                        <code>
+from distutils.core import setup
+from Cython.Build import cythonize
+from distutils.extension import Extension
+
+# 定义扩展模块
+module = Extension(
+"MyPyd",
+sources=["MyPyd.py"],
+extra_compile_args=["/Zi"],  # 编译器选项：生成调试信息
+extra_link_args=["/DEBUG"],  # 链接器选项：生成 PDB 文件
+)
+setup(
+ext_modules = cythonize(module)
+)
+python setup.py build_ext --inplace
+</code>
+                                                    </pre>
+<p>当我们编译出来后会产生符号表pdb，以及一个pyd文件，那么我们可以使用bindiff进行恢复大部分函数的符号表<br>
+    <a href="https://docs.python.org/3/c-api/object.html#c.PyObject_GetAttr">cpython函数信息</a>
+<br>恢复完函数符号后那么重要的就是分析函数了，其实大部分都会调用cmp这一个比较函数，在不能恢复函数符号的时候也可以通过动调来实现分析函数
+<br>所以本篇想讲述的是，在遇到不熟悉的框架语言亦或者其他结构的时候，可以通过bindiff恢复函数的符号表
+</P>
+<h2>bindiff报错</h2>
+<p>首先是路径不能有中文，不然一定会报错<br>
+然后可以不用安装bindiff直接使用插件即可，我安装了bindiff之后ida找不到插件了不知道是什么原因<br>
+需要安装jdk，注意以下ida版本即可
+</p>
+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- share box -->
+                                
+                                <!-- Contact Form -->
+                                
+                                <!--End Contact Form -->
+                            </div>
+                        </div>
+                        <!-- end item -->
+
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+            
+    </div>
+
+</div>
+<!--End pagewrapper-->
+
+
+<script src="js/jquery.js"></script> 
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/owl.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/element-in-view.js"></script>
+<script src="js/knob.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/mousemoveparallax.js"></script>
+<script src="js/pagenav.js"></script>
+<script src="js/jquery-type.js"></script>
+<script src="js/particle-alone.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/script.js"></script>
+
+<!--Google Map APi Key-->
+<script src="http://ditu.google.cn/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM"></script>
+<script src="js/gmaps.js"></script>
+<script src="js/map-script.js"></script>
+<!--End Google Map APi-->
+
+</body>
+</html>
